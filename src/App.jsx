@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import UpcomingSalonsList from './components/UpcomingSalonsList';
 import AlgorithmicMatcher from './components/AlgorithmicMatcher';
+import OutcomeChart from './components/OutcomeChart';
 import CabModal from './components/CabModal';
 import Footer from './components/Footer';
 import { UPCOMING_SALONS } from './data/mockTribeData';
@@ -59,6 +60,9 @@ export default function App() {
           onScrollToMatcher={scrollToMatcher}
           onScrollToSalons={scrollToSalons}
         />
+
+        {/* Bklit UI + Julien Bek $1 vs $6 Sequoia Framework */}
+        <OutcomeChart onCtaClick={() => setIsCabOpen(true)} />
 
         {/* Algorithmic Matcher Sandbox */}
         <AlgorithmicMatcher

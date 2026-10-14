@@ -1,9 +1,13 @@
 import React from 'react';
 import { Wine, Users, Sparkles, Shield, ArrowRight, CheckCircle2, TrendingUp, Compass } from 'lucide-react';
+import ParticlesCanvas from './ParticlesCanvas';
 
 export default function Hero({ onOpenCab, onScrollToMatcher, onScrollToSalons }) {
   return (
-    <section className="relative pt-12 pb-16 overflow-hidden">
+    <section className="relative pt-16 pb-20 overflow-hidden">
+      {/* Interactive WebGL / Casberry Canvas Simulation */}
+      <ParticlesCanvas color="245, 158, 11" particleCount={50} connectionDistance={120} />
+
       {/* Background Ambient Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gradient-to-r from-amber-600/15 via-gold-500/10 to-wine-700/15 blur-[130px] pointer-events-none rounded-full" />
 
